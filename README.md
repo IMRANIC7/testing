@@ -1,6 +1,5 @@
-```html
 <!-- ========================= -->
-<!-- PROJECTS SECTION -->
+<!-- FEATURED PROJECTS -->
 <!-- ========================= -->
 
 <section class="projects" id="projects">
@@ -137,63 +136,79 @@
   </div>
 </section>
 
-<!-- ========================= -->
-<!-- SUPER ANIMATION CSS -->
-<!-- ========================= -->
 
 <style>
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
 
 .project-link{
   text-decoration:none;
   color:white;
 }
 
-/* MAGIC CARD */
-
-.magic-card{
-  position:relative;
-  overflow:hidden;
-  transition:0.6s ease;
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
 }
+
+.project-card{
+  background:rgba(20,20,20,0.85);
+  border-radius:26px;
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,0.2);
+  transition:0.6s ease;
+  position:relative;
+  backdrop-filter:blur(12px);
+}
+
+/* MAGIC LIGHT EFFECT */
 
 .magic-card::before{
   content:'';
   position:absolute;
   width:300px;
   height:300px;
-  background:radial-gradient(circle,
-  rgba(212,175,55,0.25),
+  background:
+  radial-gradient(circle,
+  rgba(212,175,55,0.22),
   transparent 70%);
+
   top:-150px;
   right:-150px;
+
   transition:0.6s ease;
   pointer-events:none;
 }
 
 .magic-card:hover::before{
-  transform:scale(1.5);
+  transform:scale(1.4);
 }
 
-/* HOVER EFFECT */
+/* 3D HOVER */
 
 .magic-card:hover{
+
   transform:
   perspective(1200px)
-  rotateX(5deg)
-  rotateY(-5deg)
-  translateY(-15px)
+  rotateX(4deg)
+  rotateY(-4deg)
+  translateY(-14px)
   scale(1.02);
 
   box-shadow:
   0 0 30px rgba(212,175,55,0.2),
-  0 0 60px rgba(255,120,0,0.15),
-  0 30px 60px rgba(0,0,0,0.6);
+  0 0 60px rgba(255,120,0,0.12),
+  0 30px 60px rgba(0,0,0,0.65);
 }
 
 /* IMAGE */
 
 .project-image{
   position:relative;
+  height:260px;
   overflow:hidden;
 }
 
@@ -204,6 +219,8 @@
   object-fit:cover;
   transition:1s ease;
 }
+
+/* ZOOM EFFECT */
 
 .magic-card:hover img,
 .magic-card:hover video{
@@ -216,10 +233,12 @@
 .image-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
+
+  background:
+  linear-gradient(
   to top,
   rgba(0,0,0,0.9),
-  rgba(0,0,0,0.1)
+  rgba(0,0,0,0.15)
   );
 
   display:flex;
@@ -235,14 +254,15 @@
 }
 
 .image-overlay span{
-  color:#fff;
   border:1px solid #d4af37;
-  padding:14px 26px;
+  padding:14px 28px;
   border-radius:40px;
+  color:white;
   letter-spacing:3px;
   font-size:0.8rem;
   backdrop-filter:blur(10px);
   background:rgba(255,255,255,0.05);
+
   transform:translateY(20px);
   transition:0.5s ease;
 }
@@ -251,7 +271,71 @@
   transform:translateY(0);
 }
 
-/* LAVA EFFECT */
+/* CONTENT */
+
+.project-content{
+  padding:30px;
+}
+
+.project-content h3{
+  color:#d4af37;
+  font-size:1.7rem;
+  margin-bottom:15px;
+  transition:0.5s;
+}
+
+.magic-card:hover h3{
+  color:#f5d97a;
+
+  text-shadow:
+  0 0 10px rgba(212,175,55,0.5),
+  0 0 20px rgba(212,175,55,0.25);
+}
+
+.project-content p{
+  color:#bbb;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+/* TAG */
+
+.tag{
+  display:inline-block;
+  padding:8px 18px;
+  border:1px solid #d4af37;
+  border-radius:40px;
+  color:#d4af37;
+  font-size:0.72rem;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+/* TECH STACK */
+
+.tech-stack{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.tech-stack span{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:0.75rem;
+  color:#f5d97a;
+  transition:0.4s;
+}
+
+.tech-stack span:hover{
+  background:#d4af37;
+  color:black;
+  transform:translateY(-4px);
+}
+
+/* LAVA ANIMATION */
 
 .lava-card::after{
   content:'';
@@ -281,7 +365,7 @@
   }
 }
 
-/* FLOAT ANIMATION */
+/* FLOAT EFFECT */
 
 .project-card{
   animation:floatCard 5s ease-in-out infinite;
@@ -298,31 +382,6 @@
   }
 }
 
-/* GLOW EFFECT */
-
-.project-content h3{
-  transition:0.5s;
-}
-
-.magic-card:hover h3{
-  color:#f5d97a;
-  text-shadow:
-  0 0 10px rgba(212,175,55,0.5),
-  0 0 20px rgba(212,175,55,0.3);
-}
-
-/* TECH STACK */
-
-.tech-stack span{
-  transition:0.4s;
-}
-
-.tech-stack span:hover{
-  background:#d4af37;
-  color:black;
-  transform:translateY(-4px);
-}
-
 /* MOBILE */
 
 @media(max-width:768px){
@@ -335,11 +394,10 @@
 
 </style>
 
-<!-- ========================= -->
-<!-- REVEAL ANIMATION SCRIPT -->
-<!-- ========================= -->
 
 <script>
+
+/* REVEAL ANIMATION */
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -386,6 +444,4 @@ document.querySelectorAll('.magic-card').forEach(card=>{
 
 });
 
-
 </script>
-```
