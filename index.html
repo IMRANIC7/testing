@@ -1,0 +1,439 @@
+Save this as **index.html**. It includes a professional profile photo placeholder and 6 work-gallery placeholders. Replace the image URLs later with real photos.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Fathima Jannath Navas | Physiotherapist Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8fb;
+color:#1e293b;
+}
+
+header{
+background:linear-gradient(135deg,#0f766e,#0891b2);
+color:white;
+padding:80px 8%;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.hero-content{
+flex:1;
+min-width:300px;
+}
+
+.hero-content h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.hero-content h3{
+font-weight:400;
+margin-bottom:20px;
+}
+
+.hero-content p{
+margin-bottom:25px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:white;
+color:#0f766e;
+text-decoration:none;
+font-weight:600;
+border-radius:30px;
+}
+
+.profile-box{
+width:320px;
+height:320px;
+border-radius:50%;
+border:8px solid rgba(255,255,255,.4);
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:600;
+color:#64748b;
+overflow:hidden;
+}
+
+.profile-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
+color:#0f766e;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.item{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.item:hover{
+transform:translateY(-5px);
+}
+
+.timeline{
+border-left:4px solid #06b6d4;
+padding-left:25px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery-box{
+height:250px;
+background:white;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:#64748b;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.skills li{
+margin-bottom:10px;
+}
+
+.contact{
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>Dr. Fathima Jannath Navas</h1>
+
+<h3>Bachelor of Physiotherapy (BPT)</h3>
+
+<p>
+Sports Injury Rehabilitation • Orthopaedic Rehabilitation • Athletic Recovery • Performance Enhancement Training
+</p>
+
+<a href="mailto:fathimajannath995@gmail.com" class="btn">Contact Me</a>
+
+</div>
+
+<div class="profile-box">
+
+<!-- Replace with your image -->
+<!-- <img src="images/profile.jpg"> -->
+
+PROFILE PHOTO
+
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Dedicated and compassionate Physiotherapist with 2 years of clinical experience in musculoskeletal rehabilitation, sports injury management, and post-surgical recovery. Skilled in assessment, diagnosis, rehabilitation planning, and performance enhancement. Passionate about evidence-based practice and committed to helping patients regain mobility, strength, and confidence through personalized treatment programs.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Clinical Expertise</h2>
+
+<div class="grid">
+
+<div class="item">ACL Rehabilitation</div>
+<div class="item">PCL Rehabilitation</div>
+<div class="item">MCL & LCL Rehabilitation</div>
+<div class="item">Sports Injury Management</div>
+<div class="item">Return-to-Sport Testing</div>
+<div class="item">TKR Rehabilitation</div>
+<div class="item">Frozen Shoulder Rehabilitation</div>
+<div class="item">Rotator Cuff Rehabilitation</div>
+<div class="item">Functional Movement Assessment</div>
+<div class="item">Performance Enhancement Training</div>
+<div class="item">Athletic Recovery Programs</div>
+<div class="item">Biomechanical Analysis</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Experience</h2>
+
+<div class="card timeline">
+
+<h3>Best Tone Clinic, Vyttila</h3>
+
+<p><strong>Physiotherapist</strong></p>
+
+<p>2 Years Experience</p>
+
+<p>
+Managing sports injuries, orthopedic rehabilitation, return-to-play protocols, movement analysis, and post-operative rehabilitation programs.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Clinical Work Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-box">ACL Rehabilitation Session Photo</div>
+
+<div class="gallery-box">Sports Injury Treatment Photo</div>
+
+<div class="gallery-box">Dry Needling Procedure Photo</div>
+
+<div class="gallery-box">Cupping Therapy Photo</div>
+
+<div class="gallery-box">Movement Assessment Photo</div>
+
+<div class="gallery-box">Strength & Conditioning Session Photo</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+
+<h3>Bachelor of Physiotherapy (BPT)</h3>
+
+<p>BCF College of Physiotherapy, Chemmanakary, Vaikom</p>
+
+<p>2019 – 2024</p>
+
+<p>Score: 74%</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="grid">
+
+<div class="item">
+
+<h3>Certificate Course in Dry Needling (CCDN)</h3>
+
+<p>IHFA | May 2026</p>
+
+<p>40 CPD Points Approved by CPD Worldwide (UK)</p>
+
+</div>
+
+<div class="item">
+
+<h3>Certificate Course in Cupping Therapy (CCCT)</h3>
+
+<p>IHFA | April 2026</p>
+
+<p>40 CPD Points Approved by CPD Worldwide (UK)</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Workshop</h2>
+
+<div class="card">
+
+<h3>Update on Physiotherapy Assessment and Intervention for Older Adults with Osteoarthritis</h3>
+
+<p>Nitte Institute of Physiotherapy, Mangaluru</p>
+
+<p>1 December 2022</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Core Clinical Skills</h2>
+
+<div class="card">
+
+<ul class="skills">
+
+<li>Manual Therapy</li>
+<li>Joint Mobilization</li>
+<li>Soft Tissue Mobilization</li>
+<li>Myofascial Release</li>
+<li>Trigger Point Therapy</li>
+<li>Therapeutic Exercise Planning</li>
+<li>Strength & Conditioning Programs</li>
+<li>Musculoskeletal Assessment</li>
+<li>Neurological Evaluation</li>
+<li>Gait Analysis</li>
+<li>Electrotherapy</li>
+<li>TENS Therapy</li>
+<li>Ultrasound Therapy</li>
+<li>Heat & Cold Therapy</li>
+<li>Pediatric Physiotherapy</li>
+<li>Geriatric Physiotherapy</li>
+<li>Patient Education</li>
+<li>Evidence-Based Practice</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Languages</h2>
+
+<div class="grid">
+
+<div class="item">English</div>
+<div class="item">Malayalam</div>
+<div class="item">Tamil</div>
+<div class="item">Hindi</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Professional Strengths</h2>
+
+<div class="grid">
+
+<div class="item">Critical Thinking</div>
+<div class="item">Diplomacy</div>
+<div class="item">Detail Oriented</div>
+<div class="item">Professionalism</div>
+<div class="item">Communication Skills</div>
+<div class="item">Enthusiasm for Learning</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Information</h2>
+
+<p>📞 8891425842</p>
+
+<p>📧 fathimajannath995@gmail.com</p>
+
+<p>📍 Kannadi Parambil House, 18/680 Gurujyothi Lane, Palluruthy</p>
+
+</section>
+
+<footer>
+
+© 2026 Dr. Fathima Jannath Navas | Physiotherapy Portfolio
+
+</footer>
+
+</body>
+</html>
+```
